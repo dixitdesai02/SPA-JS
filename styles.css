@@ -1,11 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
+@layer bootstrap, custom;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap') layer(custom);
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css") layer(bootstrap);
+
+@layer custom {
 
 body {
     font-family: 'Poppins', sans-serif;
+}
+
+
+button {
+    background-image: linear-gradient(to bottom, yellow 50%, transparent 50%) ;
+    background-size: 100% 200% ; 
+    background-position: bottom ;   
+    transition: background-position 0.25s ease;  
+    color: black;
+    border: 1px solid 
+}
+  
+button:hover {
+    background-position: top;
+} 
+
+
 }
