@@ -23,7 +23,7 @@
         <nav class="navbar navbar-nav navbar-expand-md bg-dark navbar-dark fixed-top">
             <div class="container">
                 <a class="navbar-brand text-light fw-bolder fs-4" href="#">Better Solutions</a>
-                <button class="navbar-toggler" type="button">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
                     <span class="navbar-toggler-icon"></span>
                   </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navmenu">
@@ -41,7 +41,7 @@
 
     <!-- Home -->
     <section id="home" class="bg-dark py-5">
-        <div class="container d-flex flex-column flex-lg-row justify-content-between align-items-center column-gap-lg-5 text-center text-lg-start">
+        <div class="container py-5 d-flex flex-column flex-lg-row justify-content-between align-items-center column-gap-lg-5 text-center text-lg-start">
 
             <div class="pt-5 pt-lg-0">
                 <h1 class="fw-bolder pb-3 text-light">Better Solutions For Your Business</h1>
@@ -52,32 +52,107 @@
                 </button>  
             </div>
 
-            <img class="img-fluid w-50 mt-4" src="images/hero.png" alt="Hero Image">
+            <img class="hero-img img-fluid py-5" src="images/hero.png" alt="Hero Image">
         </div>
     </section>
 
 
     <!-- About US -->
-    <section id="about" class="bg-light py-5">
+    <section id="about" class="bg-white py-5">
         <div class="container py-2">
-            <h2 class="text-center fw-bold">Team that Engineers your Next Digital Product</h2>
+            <h2 class="text-center text-dark fw-bold fs-1">Team that Engineers your Next Digital <div class="about-team mt-3 d-inline"> Product</div></h2>
 
-            <hr class="w-75 m-auto"/>
-
-            <div class="d-flex flex-column flex-lg-row pt-5 justify-content-center">
+            <div class="d-flex flex-column flex-lg-row py-5 justify-content-center">
                 <div class="w-75 align-self-center">
                     <img class="img-fluid" src="images/about.webp" alt="About">
                 </div>
 
-                <div class="about-content text-dark fs-5 text-center w-100 d-flex flex-column justify-content-center pt-5 pt-lg-0">
+                <div class="about-content text-dark fs-5 text-center w-100 d-flex flex-column justify-content-center pt-5 pt-lg-0 opacity-75">
                     <p>Nearly every organization will need to become a tech company in order to compete tomorrow. Yes, even yours. At Better Solutions, we are on a mission to help companies develop competitiveness and agility using the software</p>
                     <p>Our Product Innovation Center transforms your engineering from being bottlenecks to growth drivers. We help you to identify and solve critical business challenges with proven technology practices such as DevOps, cloud-native development, and quality engineering services. Our remote agile teams of engineers immerse themselves in your project, maintaining your company culture and working in line with your strategic goals.</p>
                 </div>
             </div>
+
         </div>
+
+        <div class="parent-wrapper w-100">
+
+            <h2 class="text-center fw-bold fs-2 text-dark pb-5">Leadership <span class="about-team">Team</span></h2>
+                
+                <div class="team-wrapper">
+                    <div class="team-bg"></div>
+                    <div class="team row justify-content-center justify-content-sm-around bg-info-subtle px-5 pt-3">
+                        <div class="team-member col-11 col-sm-5 col-xl-2">
+                            <div class="heading pb-4">
+                                <div class="name pt-3 fw-bold">
+                                    John Doe
+                                </div>
+                                <div class="designation">
+                                    -CEO
+                                </div>
+                            </div>
+    
+                            <div class="team-member-image">
+                                <img src="images/user-1.png" alt="CEO">
+                            </div>
+                        </div>
+    
+                        <div class="team-member col-11 col-sm-5 col-xl-2">
+                            <div class="heading pb-4">
+                                <div class="name pt-3 fw-bold">
+                                    Emma Watson
+                                </div>
+                                <div class="designation">
+                                    -CTO
+                                </div>
+                            </div>
+    
+                            <div class="team-member-image">
+                                <img src="images/user-2.png" alt="CEO">
+                            </div>
+                        </div>
+    
+    
+                        <div class="team-member col-11 col-sm-5 col-xl-2">
+                            <div class="heading pb-4">
+                                <div class="name pt-5 pt-md-3 fw-bold">
+                                    Karl Rock
+                                </div>
+                                <div class="designation">
+                                    -Head, Sales
+                                </div>
+                            </div>
+    
+                            <div class="team-member-image">
+                                <img src="images/user-3.png" alt="CEO">
+                            </div>
+                        </div>
+
+                        <div class="team-member col-11 col-sm-5 col-md-5 col-xl-2">
+                            <div class="heading pb-4">
+                                <div class="name pt-5 pt-md-3 fw-bold">
+                                    Mary Smith
+                                </div>
+                                <div class="designation">
+                                    -Project Manager
+                                </div>
+                            </div>
+    
+                            <div class="team-member-image">
+                                <img src="images/user-4.png" alt="CEO">
+                            </div>
+                        </div>
+    
+                    </div>
+    
+                </div>
+        </div>
+
+
+
     </section>
 
-    
+
     
 </body>
 </html>

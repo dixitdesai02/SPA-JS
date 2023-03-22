@@ -12,7 +12,17 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+#home {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
+}
 
+@media screen  and (max-width: 900px){
+    #home {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 94%, 0% 100%);
+    }
+}
+
+/* 
 button {
     background-image: linear-gradient(to bottom, yellow 50%, transparent 50%) ;
     background-size: 100% 200% ; 
@@ -24,7 +34,86 @@ button {
   
 button:hover {
     background-position: top;
-} 
+}  */
 
+.hero-img {
+    width: 50%;
+    animation: animate 1.4s;
+    animation-iteration-count: infinite;
+    animation-delay: 0.4s;
+    animation-timing-function: linear;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(0.4rem);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    75% {
+        transform: translateY(-0.4rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .hero-img {
+        width: 85%;
+    }
+}
+
+
+#about h2 {
+    opacity: 85%;
+}
+
+.about-team {
+    margin-top: 0;
+    border-bottom: 4px solid #0dcaf0;
+    text-shadow: 1px 1px 1.5px rgb(43, 43, 43);
+}
+
+.team-wrapper {
+    width: 90%;
+    max-width: 1400px;
+    margin: auto;
+    position: relative;
+    background: #0dcaf0;
+}
+
+.team-bg {
+    position: absolute;
+    right: -33px;
+    top: -22px;
+    background: #0ccaf0;
+    width: 101%;
+    height: 100%;
+    opacity: 0.5;
+}
+
+.team {
+    z-index: 1;
+    position: relative;
+}
+
+.team-member {
+    width: 270px;
+}
+
+.team-member-image img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    object-fit: contain;
+}
 
 }
