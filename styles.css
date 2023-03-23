@@ -1,6 +1,5 @@
-
-
-@layer bootstrap, custom;
+@layer bootstrap,
+custom;
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap') layer(custom);
 
@@ -8,21 +7,23 @@
 
 @layer custom {
 
-body {
-    font-family: 'Poppins', sans-serif;
-}
-
-#home {
-    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
-}
-
-@media screen  and (max-width: 900px){
-    #home {
-        clip-path: polygon(0% 0%, 100% 0%, 100% 94%, 0% 100%);
+    body {
+        font-family: 'Poppins', sans-serif;
+        overflow-x: hidden;
     }
-}
 
-/* 
+    #home {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
+    }
+
+
+    @media screen and (max-width: 900px) {
+        #home {
+            clip-path: polygon(0% 0%, 100% 0%, 100% 94%, 0% 100%);
+        }
+    }
+
+    /* 
 button {
     background-image: linear-gradient(to bottom, yellow 50%, transparent 50%) ;
     background-size: 100% 200% ; 
@@ -36,84 +37,225 @@ button:hover {
     background-position: top;
 }  */
 
-.hero-img {
-    width: 50%;
-    animation: animate 1.4s;
-    animation-iteration-count: infinite;
-    animation-delay: 0.4s;
-    animation-timing-function: linear;
-}
-
-@keyframes animate {
-    0% {
-        transform: translateY(0);
-    }
-    25% {
-        transform: translateY(0.4rem);
-    }
-
-    50% {
-        transform: translateY(0);
-    }
-
-    75% {
-        transform: translateY(-0.4rem);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
-}
-
-@media screen and (max-width: 992px) {
     .hero-img {
-        width: 85%;
+        width: 50%;
+        animation: animate 1.4s;
+        animation-iteration-count: infinite;
+        animation-delay: 0.4s;
+        animation-timing-function: linear;
     }
-}
+
+    @keyframes animate {
+        0% {
+            transform: translateY(0);
+        }
+
+        25% {
+            transform: translateY(0.4rem);
+        }
+
+        50% {
+            transform: translateY(0);
+        }
+
+        75% {
+            transform: translateY(-0.4rem);
+        }
+
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    @media screen and (max-width: 992px) {
+        .hero-img {
+            width: 85%;
+        }
+    }
 
 
-#about h2 {
-    opacity: 85%;
-}
+    h2 {
+        opacity: 85%;
+    }
 
-.about-team {
-    margin-top: 0;
-    border-bottom: 4px solid #0dcaf0;
-    text-shadow: 1px 1px 1.5px rgb(43, 43, 43);
-}
+    .text-shadow {
+        margin-top: 0;
+        border-bottom: 4px solid #0dcaf0;
+        text-shadow: 1px 1px 1.5px rgb(43, 43, 43);
+    }
 
-.team-wrapper {
-    width: 90%;
-    max-width: 1400px;
-    margin: auto;
-    position: relative;
-    background: #0dcaf0;
-}
+    .team-wrapper {
+        width: 80%;
+        max-width: 1400px;
+        margin: auto;
+        position: relative;
+        background: #0dcaf0;
+    }
 
-.team-bg {
-    position: absolute;
-    right: -33px;
-    top: -22px;
-    background: #0ccaf0;
-    width: 101%;
-    height: 100%;
-    opacity: 0.5;
-}
+    .team-bg {
+        position: absolute;
+        right: -33px;
+        top: -22px;
+        background: #0ccaf0;
+        width: 101%;
+        height: 100%;
+        opacity: 0.5;
+    }
 
-.team {
-    z-index: 1;
-    position: relative;
-}
+    .team {
+        z-index: 1;
+        position: relative;
+    }
 
-.team-member {
-    width: 270px;
-}
+    .team-member {
+        width: 270px;
+    }
 
-.team-member-image img {
-    width: 250px;
-    height: 250px;
-    object-fit: cover;
-    object-fit: contain;
-}
+    .team-member-image img {
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+        object-fit: contain;
+    }
+
+    .dot {
+        font-size: 400%;
+    }
+
+
+
+    .carousel-wrapper {
+        display: flex;
+        max-width: 1200px;
+        position: relative;  
+    }
+
+    .carousel-wrapper i {
+        top: 45%;
+        padding: 20px 25px;
+        color: #343F4F;
+        cursor: pointer;
+        font-size: 1.15rem;
+        position: absolute;
+        text-align: center;
+        background: #cff4fc;
+        border-radius: 50%;
+        transition: all 0.1s linear;
+        z-index: 1;
+    }
+
+    .carousel-wrapper i:hover {
+        background: #a0eeff;
+    }
+
+    .carousel-wrapper i:first-child {
+        left: -25px;
+        display: none;
+    }
+
+    .carousel-wrapper i:last-child {
+        right: -25px;
+    }
+
+    .carousel-wrapper .carousel {
+        cursor: pointer; 
+        overflow: hidden;
+        white-space: nowrap;
+        scroll-behavior: smooth;
+    }
+
+    .caro-item {
+        display: inline-block;
+    }
+
+    .carousel {
+        width: 100%;
+    }
+
+    .caro-item {
+        width: calc(100%/4);
+        margin-left: 10px;
+    }
+    
+    .carousel-content {
+        width: 95%;
+        margin: auto;
+        white-space: normal;
+    }
+    
+    .carousel img {
+        height: 250px;
+        object-fit: cover;
+        user-select: none;
+        width: 100%;
+    }
+
+    .carousel .caro-item:first-child {
+        margin-left: 0px;
+    }
+
+    @media screen and (max-width: 1200px) {
+        .caro-item {
+            width: calc(100%/3);
+        }    
+    }
+
+    @media screen and (max-width: 900px) {
+        .caro-item {
+            width: calc(100% / 2);
+        }
+    }
+
+    @media screen and (max-width: 550px) {
+        .caro-item {
+            width: 100%;
+        }
+    }
+
+
+
+    /* Services */
+    #services {
+        background: #def8ff;
+        height: 100vh;
+    }
+
+    /* .service-content {
+        width: 85%;
+        padding: 1rem 0 0.2rem 0;
+    } */
+
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 1rem;
+        place-items: center;
+        width: 90%;
+        max-width: 900px;
+        margin: auto;
+    }
+
+
+    .service-content {
+        width: 180px;
+        height: 150px;
+        padding: 0.2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @media screen and (min-width: 765px) {
+        .services-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    @media screen and (min-width: 991px) {
+        .services-grid {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
 
 }
