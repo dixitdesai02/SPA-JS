@@ -479,9 +479,10 @@ custom;
 
 
     #modal {
-        width: 50%;
+        width: 85%;
+        max-width: 750px;
         position: fixed;
-        top: 40%;
+        top: 50%;
         left: 50%;
         transform: translate(-50%, -50%) scale(0);
         z-index: 2000;
@@ -510,9 +511,15 @@ custom;
         pointer-events: all;
     }
 
-    @media screen and (max-width: 991px) {
+    @media screen and (min-width: 991px) {
         #modal {
-            width: 85%;
+            width: 60%;
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        #modal {
+            width: 45%;
         }
     }
 

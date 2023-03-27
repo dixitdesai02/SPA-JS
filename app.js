@@ -49,15 +49,21 @@ contactForm.addEventListener("submit", (e) => {
     input.value = "";
   });
 
-  notification.style.display = "flex";
-  setTimeout(()=>{
-    notification.style.display = "none";
-  }, 4000);
+  showNotification();
 });
 
+function showNotification() {
+    notification.style.display = "flex";
+
+    setTimeout(()=>{
+        notification.style.display = "none";
+    }, 4000);
+};
+
 closeBtn.addEventListener("click", () => {
-  notification.style.display = "none";
-});
+    notification.style.display = "none";
+})
+
 
 
 // Modal
@@ -84,12 +90,8 @@ overlay.addEventListener("click", () => {
 
 submitModal.addEventListener("submit", (e) => {
     e.preventDefault();
-    notification.innerText = "Appreciate your interest! Will get to you very soon..";
-    notification.style.display = "flex";
-    setTimeout(()=>{
-      notification.style.display = "none";
-      notification.innerText = "Thanks for Connecting! Will get to you soon..";
-    }, 4000);
+    
+    showNotification();
 
     closeModal(modal);
 });
