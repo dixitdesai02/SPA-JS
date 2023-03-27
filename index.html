@@ -6,16 +6,481 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Bootstrap Styles and JS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous" defer></script>
     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- Custom stylesheet and JS -->
     <link rel="stylesheet" href="styles.css">
     <script src="app.js" defer></script>
 
     <title>Better Solutions</title>
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
 </head>
 <body>
+    
+    <!-- NavBar -->
+    <header>
+        <nav class="navbar navbar-nav navbar-expand-lg bg-dark navbar-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand text-light fw-bolder fs-4" href="#">Better Solutions</a>
 
-</body>
+                <div class="nav-list">
+                    <div class="hamburger-menu">
+                        <div class="line line-1"></div>
+                        <div class="line line-2"></div>
+                        <div class="line line-3"></div>
+                    </div>
+
+                    <ul class="navbar-nav">
+                        <li class="nav-item me-lg-3"><a class="nav-link  text-light" href="#">Home</a></li>
+                        <li class="nav-item me-lg-3"><a class="nav-link  text-light" href="#about">About Us</a></li>
+                        <li class="nav-item me-lg-3"><a class="nav-link  text-light" href="#work">Our Work</a></li>
+                        <li class="nav-item me-lg-3"><a class="nav-link  text-light" href="#services">Services</a></li>
+                        <li class="nav-item me-lg-3"><a class="nav-link  text-light" href="#contact">Contact Us</a></li>
+                    </ul> 
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Home -->
+    <section id="home" class="bg-dark py-5">
+        <div class="container py-5 d-flex flex-column flex-lg-row justify-content-between align-items-center column-gap-lg-5 text-center text-lg-start">
+
+            <div class="pt-5 pt-lg-0">
+                <h1 class="fw-bolder pb-3 text-light">Better Solutions For Your Business</h1>
+                <h3 class="text-secondary">We are team of talented developers developing Exceptional softwares</h3>
+
+                <button type="button" class="btn btn-lg btn-info text-light mt-5 btn-get-started" data-modal-target="modal"> 
+                    Get Started
+                </button>  
+            </div>
+
+            <img class="hero-img img-fluid py-5" src="images/hero.png" alt="Hero Image">
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="modal" class="container bg-dark text-light pb-3 rounded-2">
+        <div class="modal-dialog">
+            <div class="modal-content p-3">
+            <div class="modal-header py-3">
+                <h5 class="modal-title fs-3">Brief us about your work</h5>
+                <button type="button" class="close-modal border-0 bg-dark text-light"><i class="fa-solid fa-xmark fs-4"></i></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                <div class="form-group mb-3">
+                    <label for="name">Your Name:</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="email">Your Email:</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="project-type">Project Type:</label>
+                    <select class="form-select" name="type" id="project-type" required>
+                    <option value="webapp" selected>Website Development</option>
+                    <option value="mobileapp">Mobile App Development</option>
+                    <option value="design">Designing</option>
+                    <option value="design">Other</option>
+                    <option value="none">Not Decided Yet</option>
+                    </select>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="desc">Brief about your project:</label>
+                    <textarea class="form-control" id="desc" rows="3" placeholder="Project Info" required></textarea>
+                </div>
+                <div class="form-group mb-4">
+                    <label for="budget">Estimated Budget:</label>
+                    <select class="form-select" name="type" id="budget" required>
+                    <option value="$10K-$25K" selected>$10K to $25K</option>
+                    <option value="$25K-$50K">$25K to $50K</option>
+                    <option value="$50K-$200K">$50K to $200K</option>
+                    <option value="$200K+">$200K+</option>
+                    <option value="notsure">Not Sure</option>
+                    </select>
+                </div>
+
+                <button type="button" class="btn btn-secondary me-3 close-modal">Close</button>
+                <button type="submit" class="btn btn-info submit-modal">Submit</button>
+
+                </form>
+            </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- Overlay -->
+        <div id="overlay"></div>
+
+    <!-- About US -->
+    <section id="about" class="bg-white py-5">
+        <div class="container py-2">
+            <h2 class="text-center text-dark fw-bold fs-1">Team that Engineers your Next Digital <div class="text-shadow mt-3 d-inline">Product</div></h2>
+
+            <div class="d-flex flex-column flex-lg-row py-5 justify-content-center">
+                <div class="w-75 align-self-center">
+                    <img class="img-fluid" src="images/about.webp" alt="About">
+                </div>
+
+                <div class="about-content text-dark fs-5 text-center w-100 d-flex flex-column justify-content-center pt-5 pt-lg-0 opacity-75">
+                    <p>Nearly every organization will need to become a tech company in order to compete tomorrow. Yes, even yours. At Better Solutions, we are on a mission to help companies develop competitiveness and agility using the software</p>
+                    <p>Our Product Innovation Center transforms your engineering from being bottlenecks to growth drivers. We help you to identify and solve critical business challenges with proven technology practices such as DevOps, cloud-native development, and quality engineering services. Our remote agile teams of engineers immerse themselves in your project, maintaining your company culture and working in line with your strategic goals.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="parent-wrapper w-100">
+
+            <h2 class="text-center fw-bold fs-2 text-dark pb-5 mb-4">Leadership <span class="text-shadow">Team</span></h2>
+                
+                <div class="team-wrapper">
+                    <div class="team-bg"></div>
+                    <div class="team bg-info-subtle px-5 pt-3">
+                        <div class="team-member">
+                            <div class="heading pb-4">
+                                <div class="name pt-3 fw-bold">
+                                    John Doe
+                                </div>
+                                <div class="designation">
+                                    -CEO
+                                </div>
+                            </div>
+    
+                            <div class="team-member-image">
+                                <img src="images/team/user-1.png" alt="CEO">
+                            </div>
+                        </div>
+    
+                        <div class="team-member">
+                            <div class="heading pb-4">
+                                <div class="name pt-3 fw-bold">
+                                    Emma Watson
+                                </div>
+                                <div class="designation">
+                                    -CTO
+                                </div>
+                            </div>
+    
+                            <div class="team-member-image">
+                                <img src="images/team/user-2.png" alt="CEO">
+                            </div>
+                        </div>
+    
+    
+                        <div class="team-member">
+                            <div class="heading pb-4 pt-4 pt-lg-0">
+                                <div class="name pt-3 fw-bold">
+                                    Karl Rock
+                                </div>
+                                <div class="designation">
+                                    -Head, Sales
+                                </div>
+                            </div>
+    
+                            <div class="team-member-image">
+                                <img src="images/team/user-3.png" alt="CEO">
+                            </div>
+                        </div>
+
+                        <div class="team-member">
+                            <div class="heading pb-4 pt-4 pt-lg-0">
+                                <div class="name pt-3 fw-bold">
+                                    Mary Smith
+                                </div>
+                                <div class="designation">
+                                    -Project Manager
+                                </div>
+                            </div>
+    
+                            <div class="team-member-image">
+                                <img src="images/team/user-4.png" alt="CEO">
+                            </div>
+                        </div>
+    
+                    </div>
+    
+                </div>
+
+                <div class="dot text-center text-info opacity-50 m-auto">. . .</div>
+        </div>
+
+    </section>
+
+
+    <!-- Our work -->
+    <section id="work" class="bg-body-tertiary py-5">
+        <div class="container">
+            <h2 class="fs-2 fw-bold text-center">Our <span class="text-shadow">Work</span></h2>
+
+            <div class="carousel-wrapper pt-5 m-auto">
+                <i id="left" class="fa-solid fa-angle-left"></i>
+                <div class="carousel">
+                <div class="caro-item">
+                    <img src="images/carousel/enterprise.png" alt="img" >
+                    <div class="carousel-content fw-bold text-center py-2">
+                        Modernizing enterprise app for fintech platform
+                    </div>
+                </div>
+                
+                <div class="caro-item">
+                    <img src="images/carousel/ecommerce.png" alt="img" draggable="false">
+                    <div class="carousel-content fw-bold text-center py-2">
+                        eCommerce store for a top furniture retailer
+                    </div>
+                </div>
+
+                <div class="caro-item">
+                    <img src="images/carousel/hospitality.png" alt="img" draggable="false">
+                    <div class="carousel-content fw-bold text-center py-2">
+                        Recruitment Platform for Hospitality Domain
+                    </div>
+                </div>
+
+                <div class="caro-item">
+                    <img src="images/carousel/big-data.png" alt="img" draggable="false">
+                    <div class="carousel-content fw-bold text-center py-2">
+                        Big Data And Analytics Solution For Schools
+                    </div>
+                </div>
+
+                <div class="caro-item">
+                    <img src="images/carousel/mobility.png" alt="img" draggable="false">
+                    <div class="carousel-content fw-bold text-center py-2">
+                        Mobility Solution For Water Treatment Companies
+                    </div>
+                </div>
+
+                <div class="caro-item">
+                    <img src="images/carousel/tweets.png" alt="img" draggable="false">
+                    <div class="carousel-content fw-bold text-center py-2">
+                        Tweets driven market intelligence for industries
+                    </div>
+                </div>
+
+                <div class="caro-item">
+                    <img src="images/carousel/ui.png" alt="img" draggable="false">
+                    <div class="carousel-content fw-bold text-center py-2">
+                        UI/UX design for one of its kind fastest-growing social app
+                    </div>
+                </div>
+
+                <div class="caro-item">
+                    <img src="images/carousel/automation.png" alt="img" draggable="false">
+                    <div class="carousel-content fw-bold text-center py-2">
+                        Automation platform for auto dealerships
+                    </div>
+                </div>
+
+                </div>
+                <i id="right" class="fa-solid fa-angle-right"></i>
+              </div>
+
+              
+        </div>
+    </section>
+
+
+    <!-- Services -->
+    <section id="services" class="py-5">
+        <h2 class="text-center fs-2 fw-bold pb-5">Our <span class="text-shadow">Services</span> </h2>
+
+        <div class="container-fluid container-md">
+
+            <div class="services-grid">
+                <div class="grid-item">
+                    <div class="service-content bg-light">
+                        <img src="https://img.icons8.com/external-flat-lima-studio/64/null/external-html-user-experience-flat-lima-studio.png" class="d-block m-auto"/>
+                        <div class="service-detail pt-2 text-center">
+                            <p class="service-heading fw-bold fs-5">Website Development</p>
+                            <p class="service-desc opacity-75 text-dark">Professional UX/UI design and implementation of websites, web portals and other solutions</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-item">
+                    <div class="service-content bg-light">
+                        <img src="https://img.icons8.com/external-flatarticons-blue-flatarticons/65/null/external-mobile-app-ux-and-ui-flatarticons-blue-flatarticons.png" class="d-block m-auto"/>
+                        <div class="service-detail pt-2 text-center">
+                            <p class="service-heading fw-bold fs-5">Mobile Development</p>
+                            <p class="service-desc opacity-75 text-dark">Recalibrate your legacy app landscape with application modernization services. App modernization is at the heart of innovation</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="grid-item">
+                    <div class="service-content bg-light">
+                        <img src="https://img.icons8.com/fluency/96/null/engineering.png" class="d-block m-auto" class="d-block m-auto"/>
+                        <div class="service-detail pt-2 text-center">
+                            <p class="service-heading fw-bold fs-5">Product Engineering</p>
+                            <p class="service-desc opacity-75 text-dark">Software product development services for startups and successful tech businesses</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-item">
+                    <div class="service-content bg-light">
+                        <img src="https://img.icons8.com/external-flatarticons-blue-flatarticons/65/null/external-Search-Dollar-accounting-and-finance-flatarticons-blue-flatarticons.png" class="d-block m-auto"/>
+                        <div class="service-detail pt-2 text-center">
+                            <p class="service-heading fw-bold fs-5">Data Engineering</p>
+                            <p class="service-desc opacity-75 text-dark">Unlock the potential of data and BI to facilitate critical decision making</p>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="grid-item">
+                    <div class="service-content bg-light">
+                        <img src="https://img.icons8.com/external-flatart-icons-lineal-color-flatarticons/64/null/external-cloud-data-web-security-flatart-icons-lineal-color-flatarticons.png" class="d-block m-auto"/>
+                        <div class="service-detail pt-2 text-center">
+                            <p class="service-heading fw-bold fs-5">Cloud & DevOps</p>
+                            <p class="service-desc opacity-75 text-dark">Cloud native engineering to build scalable, reliable and operationally excellent digital products</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-item">
+                    <div class="service-content bg-light">
+                        <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/null/external-seo-new-media-flaticons-lineal-color-flat-icons.png" class="d-block m-auto"/>
+                        <div class="service-detail pt-2 text-center">
+                            <p class="service-heading fw-bold fs-5">SEO Optimization</p>
+                            <p class="service-desc opacity-75 text-dark">Improve the quality and quantity of website traffic to a website from search engines</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-item">
+                    <div class="service-content bg-light">
+                        <img src="https://img.icons8.com/clouds/100/null/test-passed.png" class="d-block m-auto"/>
+                        <div class="service-detail pt-2 text-center">
+                            <p class="service-heading fw-bold fs-5">Quality Engineering</p>
+                            <p class="service-desc opacity-75 text-dark">Software testing services that drive product quality & customer satisfaction</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grid-item">
+                    <div class="service-content bg-light">
+                        <img src="https://img.icons8.com/fluency/96/null/consultation.png" class="d-block m-auto" class="d-block m-auto"/>
+                        <div class="service-detail pt-2 text-center">
+                            <p class="service-heading fw-bold fs-5">Tech Consultation</p>
+                            <p class="service-desc opacity-75 text-dark">connect businesses with experienced tech innovation advisors to solve critical enterprise challenges</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-item">
+                    <div class="service-content bg-light">
+                        <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/null/external-talent-management-marketing-technology-flaticons-lineal-color-flat-icons-2.png" class="d-block m-auto"/>
+                        <div class="service-detail pt-2 text-center">
+                            <p class="service-heading fw-bold fs-5">Talent Solutions</p>
+                            <p class="service-desc opacity-75 text-dark">Talent solutions for the changing demands of your technology workforce</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact" class="bg-light py-5 position-relative" data-aos="fade-up" data-aos-easing="ease-in-out">
+        <div class="container">
+            <h2 class="text-center fw-bold">Contact to <span class="text-shadow">Better</span></h2>
+ 
+            <div class="d-md-flex pt-4 justify-content-around align-items-center py-5">
+                <div class="w-100 d-flex justify-content-center align-items-center" data-aos="slide-up"  data-aos-easing="ease-in-out"><img class="img-fluid w-75 mx-auto" src="images/contact.svg" alt="Contact"></div>
+                <form class="w-100 pb-5 pb-lg-2" data-aos="zoom-in"  data-aos-easing="ease-in-out">
+                    <div class="form-group mb-3">
+                        <label for="name">Name:</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                    </div>
+                    <div class="form-group mb-3">
+                      <label for="email">Email:</label>
+                      <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="message"> Message:</label>
+                        <textarea class="form-control" id="message" rows="3" placeholder=""></textarea>
+                      </div>
+                    <button type="submit" class="btn btn-info text-light">Submit</button>
+                  </form>
+            </div>
+        </div>  
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-dark py-5 text-center mt-5 mt-md-0">
+        <div class="container">
+          <div class="row justify-content-center m-auto justify-content-md-between py-3">
+          <div class="col-md-2">
+            <h1 class="text-center text-md-start mx-auto"> <img src="images/logo.png" alt="logo"/> Better</h1>
+            <ul class="d-flex social-icons gap-3 p-0 justify-content-center">
+              <li><i class="fa-brands fa-facebook fs-3"><a href="#"></a></i></li>
+              <li><i class="fa-brands fa-twitter fs-3"><a href="#"></a></i></li>
+              <li><i class="fa-brands fa-instagram fs-3"><a href="#"></a></i></li>
+              <li><i class="fa-brands fa-linkedin fs-3"><a href="#"></a></i></li>
+            </ul>
+          </div>
+          <div class="quick-links col-md-8 row justify-content-between justify-content-md-center">
+             <div class="col-lg-3 col-6 p-0">
+                <ul class="text-start">
+                  <h5 class="pt-4 pb-2 link-header">ABOUT</h5>
+                  <li>About Us</li>
+                  <li>Our Partners</li>
+                  <li>How we work</li>
+                  <li>Areas we serve</li>
+                  <li>Careers</li>
+                  <li>Contact Us</li>
+                </ul>
+             </div> 
+             <div class="col-lg-3 col-6 p-0">
+              <ul class="text-start">
+                <h5 class="pt-4 pb-2 link-header">SERVICES</h5>
+                <li>Product Engineering</li>
+                <li>Cloud & DevOps Engineering</li>
+                <li>Data Engineering</li>
+                <li>Quality Engineering</li>
+                <li>Talent Solutions</li>
+              </ul>
+             </div> 
+             <div class="col-lg-3 col-6 p-0">
+              <ul class="text-start">
+                <h5 class="pt-4 pb-2 link-header">RESOURCES</h5>
+                <li>Blog</li>
+                <li>Partnerships</li>
+                <li>Ebooks</li>
+                <li>Case Studies</li>
+              </ul>
+             </div> 
+             <div class="col-lg-3 col-6 p-0">
+                <ul class="text-start">
+                  <h5 class="pt-4 pb-2 link-header">SOCIALS</h5>
+                  <li>Facebook</li>
+                  <li>Twitter</li>
+                  <li>Instagram</li>
+                  <li>LinkedIn</li>
+                </ul>
+               </div> 
+          </div>
+          </div>
+          <p class="text-secondary pt-3">Copyright &copy; 2023 Better Solutions All Rights Reserved </p>
+        </div>
+    </footer>
+
+
+    <!-- Notification -->
+    <div class="notification">
+        <p>Thanks for Connecting! Will get to you soon.. </p> <i class="close fa-solid fa-xmark fs-4"></i> 
+    </div>
+
+
+    </body>
 </html>
